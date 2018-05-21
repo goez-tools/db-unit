@@ -8,6 +8,10 @@ Database Unit Testing Library based on illuminate/database
 composer require goez/db-unit --dev
 ```
 
+## Usage
+
+See [tests/DatabaseTest.php](/goez-tools/db-unit/blob/master/tests/DatabaseTest.php).
+
 ## License
 
 MIT
