@@ -13,6 +13,7 @@ use Illuminate\Database\Migrations\DatabaseMigrationRepository;
 use Illuminate\Database\Migrations\MigrationRepositoryInterface;
 use Illuminate\Database\Migrations\Migrator;
 use Illuminate\Events\Dispatcher;
+use Illuminate\Support\Facades\Facade;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_Constraint_Not as ReverseConstraint;
@@ -63,6 +64,7 @@ trait RefreshDatabase
     private function initContainer()
     {
         $this->container = Container::getInstance();
+        Facade::setFacadeApplication($this->container);
     }
 
     /**
