@@ -110,6 +110,7 @@ trait RefreshDatabase
         $manager->bootEloquent();
         $this->container->instance(ConnectionResolverInterface::class, $manager->getDatabaseManager());
         $this->container->instance(Manager::class, $manager);
+        $this->container->instance('db', $manager);
     }
 
     /**
